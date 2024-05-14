@@ -1,38 +1,89 @@
-.App {
+.container {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*margin: 10vw;*/
+}
+
+.title {
   text-align: center;
+  width: 100%;
+  color: #7ca6d3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.wrapper {
+  display: flex;
+  justify-content: center;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  margin: 10vw;
+
+  .child {
+    border-radius: 15px;
+    border: #7ca6d3 2px solid;
+    margin: 10px;
+    padding: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dragons {
+  overflow: auto;
+  max-height: 60vh;
+}
+
+.input-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 10px;
+
+  .input-label {
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  output {
+    width: 100%;
+    display: inline-block;
+    height: 33px; /* Высота */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+
+.button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  background-color: #2196F3;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.toggle {
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.button:disabled:hover {
+  background-color: #cccccc;
+}
+
+.button:hover {
+  background-color: #0b7dda;
 }
