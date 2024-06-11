@@ -12,9 +12,11 @@ class ContractManager {
     async init() {
         try {
             this.web3 = new Web3('http://localhost:7545');
-
-            this.contracts.PatternContract = await this.initContract(PatternContract);
-
+            try {
+                this.contracts.PatternContract = await this.initContract(PatternContract);
+            } catch (error) {
+                console.log('Please, migrate your contract, or connect him here')
+            }
         } catch (error) {
             console.error(error);
         }
